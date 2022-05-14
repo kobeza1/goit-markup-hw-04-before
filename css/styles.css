@@ -86,8 +86,8 @@ img {
 /* ----- HEADER ----- */
 
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
   border-bottom: 1px solid #ececec;
   /*outline: 1px solid tomato;*/
 }
@@ -115,6 +115,7 @@ img {
 }
 
 .menu-link {
+  /* display: block; */
   padding-top: 32px; /* поставил padding и сюда (помимо всей секции) , чтоб расширить область при наведении курсора */
   padding-bottom: 32px;
 
@@ -128,10 +129,42 @@ img {
   color: var(--accent-color);
 }
 
-.menu-item,
-.contact-item {
+.menu-item {
   margin-right: 50px;
 }
+
+.contact-item {
+  display: flex;
+  outline: 1px solid blue;
+
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.header-contact {
+  display: block;
+}
+
+.header-contact::before {
+  /* display: inline-flex; */
+  display: inline-block;
+  margin-right: 10px;
+
+  content: "";
+  outline: 1px solid red;
+  height: 26px;
+  width: 16px;
+
+  background-image: url(../images/icons/envelope.svg);
+  background-repeat: no-repeat;
+}
+
+/* .tel::before {
+  background-image: url(../images/icons/smartphone.svg);
+  background-size: contain;
+  background-position: right;
+} */
 
 .menu-item:last-child,
 .contact-item:last-child {
@@ -219,6 +252,31 @@ img {
 
 .advantages-item {
   margin-right: 30px;
+}
+
+.advantages-item::before {
+  display: block;
+  height: 120px;
+  background-size: 70px 70px;
+  background-position: center;
+  content: "";
+  margin-bottom: 30px;
+
+  background-color: var(--background-color-additional);
+  background-image: url(../images/icons/antenna\ 1.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages-item:nth-child(2)::before {
+  background-image: url(../images/icons/clock\ 1.svg);
+}
+
+.advantages-item:nth-child(3)::before {
+  background-image: url(../images/icons/diagram\ 1.svg);
+}
+
+.advantages-item:nth-child(4)::before {
+  background-image: url(../images/icons/astronaut\ 1.svg);
 }
 
 .advantages-item:last-child {
